@@ -1,14 +1,6 @@
 Feature: Search functionality
   As a user, I want to check search functionality of Carsguide website
 
-
-  Scenario: Search the used car with model
-    Given I am on homepage
-    When I mouse hover on 'buy+sell' tab
-    And I click 'Used' used car link
-    Then I navigate to "Used Cars For Sale" used car page
-
-
   Scenario Outline: Search the buy car with model
     Given I am on homepage
     When I mouse hover on 'buy+sell' tab
@@ -30,7 +22,6 @@ Feature: Search functionality
       | Tesla      | Model S   | Any Location | $80,000 |
       | Mitsubishi | Outlander | NT - All     | $90,000 |
 
-  @test1
   Scenario Outline: Search the used car with model
     Given I am on homepage
     When I mouse hover on 'buy+sell' tab

@@ -47,31 +47,38 @@ public class BuyCarPage extends Utility {
     WebElement findMyNextCarButton;
 
     public String getNewAndUsedCarText(){
+        log.info("Getting New And Used Car text "+newAndUsedCarText.toString());
         return getTextFromElement(newAndUsedCarText);
 
     }
     public String getUsedCarText(){
+        log.info("Getting Used Car text "+usedCarText.toString());
         return getTextFromElement(usedCarText);
     }
 
     public void selectMake(String make) {
         selectByVisibleTextFromDropDown(makeDropDown, make);
+        log.info("Selecting make Type "+make+" from dropdown "+makeDropDown.toString() );
     }
 
     public void selectModel(String model) {
         selectByValueFromDropDown(modelDropDown, model);
+        log.info("Selecting model Type "+model+" from dropdown "+modelDropDown.toString() );
     }
 
     public void selectLocation(String location) {
         selectByVisibleTextFromDropDown(locationDropDown, location);
+        log.info("Selecting location "+location+" from dropdown "+locationDropDown.toString() );
     }
 
     public void selectPrice(String price) {
         selectByVisibleTextFromDropDown(priceDropDown, price);
+        log.info("Selecting price "+price+" from dropdown "+priceDropDown.toString() );
     }
 
 
     public void clickOnFindMyNextCarButton() {
         clickOnElement(findMyNextCarButton);
+        log.info("Clicking on find My Next Car Button "+ findMyNextCarButton.toString());
     }
 }

@@ -27,18 +27,19 @@ public class HomePage extends Utility {
 
     @CacheLookup
     @FindBy(xpath = "//div[@class='uhf-child-menu']//ul//li//a[text()='Used']")
-   // @FindBy(xpath = "///header/div[@id='u_H']/div[1]/div[1]/ul[1]/li[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/a[1]")
     WebElement usedCarLink;
 
     public void mouseHoverOnBuySellTab(){
         mouseHoverToElement(buySellTab);
+        log.info("Clicking on buy Sell Tab "+ buySellTab.toString());
     }
     public void clickOnSearchCarsLink(){
         clickOnElement(searchCarsLink);
+        log.info("Clicking on search Cars Link "+ searchCarsLink.toString());
     }
     public void clickOnUsedCarLink(){
-       // mouseHoverToElement(usedCarLink);
         clickOnElement(usedCarLink);
+        log.info("Clicking on used Car Link "+ usedCarLink.toString());
     }
 
 }

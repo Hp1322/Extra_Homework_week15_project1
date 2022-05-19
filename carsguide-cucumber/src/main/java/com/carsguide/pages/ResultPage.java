@@ -13,19 +13,19 @@ public class ResultPage extends Utility {
     private static final Logger log = LogManager.getLogger(ResultPage.class.getName());
 
     public ResultPage() {
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
 
 
     }
+
     @CacheLookup
     @FindBy(xpath = "//h1[@class='listing-search-title']")
     WebElement makeText;
 
 
-
-
-    public String getMakeText(){
-      return getTextFromElement(makeText);
+    public String getMakeText() {
+        log.info("Getting make text " + makeText.toString());
+        return getTextFromElement(makeText);
     }
 
 }
